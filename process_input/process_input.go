@@ -1,17 +1,17 @@
 package processinput
 
 import (
+	"errors"
 	"fmt"
-	"strings"
-
 	"github.com/terminal-shortcut/constants"
+	"strings"
 )
 
 func ProcessInput(data *string) (res InputData, err error) {
 	parts := strings.Split(*data, " ")
 
 	if len(parts) == 0 || len(parts) < constants.MaxCountOfSplitsInCommandInput {
-		return InputData{}, fmt.Errorf("Invalid Command")
+		return InputData{}, errors.New("invalid command")
 	}
 
 	for i, part := range parts {
@@ -26,11 +26,3 @@ func ProcessInput(data *string) (res InputData, err error) {
 
 	return inputData, nil
 }
-
-//There are 3 commands to support
-// 1 rs add
-// 2 rs add foldernamd
-// 3 rs remove foldername
-// 4 rs ls
-// 5 rs help
-// 6 rs --help

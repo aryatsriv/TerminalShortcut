@@ -16,3 +16,12 @@ func main() {
 	// command.CommandRunner(&inputData)
 	fmt.Printf("Command: %s", inputData.Command)
 }
+
+//commands to support
+// 1 tdsc add
+// 2 tdsc add foldername
+// 3 tdsc remove foldername
+// 4 tdsc ls
+// 5 tdsc help
+// 6 tdsc --help
+// 7 tdsc c foldername
