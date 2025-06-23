@@ -23,5 +23,4 @@ func main() {
 // 3 tdsc remove foldername
 // 4 tdsc ls
 // 5 tdsc help
-// 6 tdsc --help
-// 7 tdsc c foldername
+// 6 tdsc c foldername
